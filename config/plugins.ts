@@ -13,9 +13,11 @@ const config = ({
       },
       actionOptions: {
         upload: {
-          folder: "blog-strapi",
+          folder: env("CLOUDINARY_FOLDER", "blog-strapi"),
         },
-        delete: {},
+        delete: {
+          folder: env("CLOUDINARY_FOLDER", "blog-strapi"),
+        },
       },
     },
   },
